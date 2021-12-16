@@ -1,8 +1,8 @@
 ﻿namespace MinimalAPIDemo;
 
-public static class Api
+public static class UserApi
 {
-    public static void ConfigureApi(this WebApplication app)
+    public static void ConfigureUserApi(this WebApplication app)
     {
         // All of my API endpoint mapping
 

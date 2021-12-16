@@ -9,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddSingleton<IUserData, UserData>();
+builder.Services.AddSingleton<IRoleData, RoleData>();
 
 var app = builder.Build();
 
@@ -21,6 +22,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.ConfigureApi();
+app.ConfigureRoleApi();
+app.ConfigureUserApi();
 
 app.Run();

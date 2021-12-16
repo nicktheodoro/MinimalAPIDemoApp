@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>UserDB</Name>
+    <Name>MinimalAPIDB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{a22a75c5-834f-4ddd-983c-77d7e3dfb1b3}</ProjectGuid>
@@ -67,11 +67,20 @@
     <Build Include="dbo\StoredProcedures\spUser_Delete.sql" />
     <Build Include="dbo\StoredProcedures\spUser_Insert.sql" />
     <Build Include="dbo\StoredProcedures\spUser_Update.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\StoredProcedures\spRole_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\spRole_Get.sql" />
+    <Build Include="dbo\StoredProcedures\spRole_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\spRole_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spRole_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UserDB.publish.xml" />
+    <RefactorLog Include="UserDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MinimalAPIUserDB.publish.publish.xml" />
   </ItemGroup>
 </Project>
